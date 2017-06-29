@@ -1,0 +1,82 @@
+-- phpMyAdmin SQL Dump
+-- version 4.3.11
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jun 29, 2017 at 02:23 PM
+-- Server version: 5.6.24
+-- PHP Version: 5.5.24
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `risktek`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `menu_list`
+--
+
+CREATE TABLE IF NOT EXISTS `menu_list` (
+  `id` int(11) NOT NULL,
+  `description` varchar(600) NOT NULL,
+  `link` varchar(600) NOT NULL,
+  `parent` int(11) NOT NULL,
+  `position` int(11) NOT NULL,
+  `module` varchar(200) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `menu_list`
+--
+
+INSERT INTO `menu_list` (`id`, `description`, `link`, `parent`, `position`, `module`) VALUES
+(1, 'About US', '', 0, 1, 'YES'),
+(2, 'Solutions', '', 0, 2, 'YES'),
+(3, 'Innovation Lab\r\n', '', 0, 3, 'NO'),
+(4, 'Reach US\r\n', '', 0, 4, 'YES'),
+(5, 'Our Team', '', 1, 1, 'NO'),
+(6, 'Mission and  Vision', '', 1, 2, 'NO'),
+(7, 'Services', '', 2, 1, 'YES'),
+(8, 'Products', '', 2, 2, 'YES'),
+(9, 'Careers', '', 4, 1, 'NO'),
+(10, 'Location', '', 4, 2, 'NO'),
+(11, 'Analytics', '', 7, 1, 'NO'),
+(12, 'Capital Markets\r\n', '', 7, 2, 'NO'),
+(13, 'Risk Management\r\n', '', 7, 3, 'NO'),
+(14, 'Payment Solution', '', 8, 1, 'NO'),
+(15, 'Remittance', '', 8, 2, 'NO'),
+(16, 'Vendor & Channel', '', 8, 3, 'NO'),
+(17, 'Financing', '', 8, 4, 'NO');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `menu_list`
+--
+ALTER TABLE `menu_list`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `menu_list`
+--
+ALTER TABLE `menu_list`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=18;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
