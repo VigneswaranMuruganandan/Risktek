@@ -1,0 +1,82 @@
+/pref/uname/update
+
+REQUEST:
+
+public class UpdateUserNameRequest extends AuthRequest {
+       
+       private String userName ;
+
+       public String getUserName() {
+              return userName;
+       }
+
+       public void setUserName(String userName) {
+              this.userName = userName;
+       }
+       
+
+}
+
+
+RESPONSE
+public  class APIResponse {
+
+       private InvocationResult result;
+
+
+
+/pref/uname/verify
+
+REQUEST:
+public class VerifyUserNameRequest {
+       private String userName;
+
+       public String getUserName() {
+              return userName;
+       }
+
+       public void setUserName(String userName) {
+              this.userName = userName;
+       }
+
+}
+
+RESPONSE:
+public class ValidateResponse extends AuthResponse {
+
+       private long otpDuration;
+       private String emailMasked;
+       private String mobileNumberMasked;
+       private Integer remainingOtpAttempts;
+       
+/pref/estmt/pref -- Update Email/Preference
+Request Class
+public class EstmtPreferenceRequest extends AuthRequest {
+
+       private Boolean eStatementPref;
+       private String email;
+
+Response Class
+public class EstmtPreferenceResponse extends AuthResponse{
+              
+       private String salutation;
+       private String name;
+       private String email;
+       private String unmaskedEmail;
+       private String contactNumber;
+       private String address1;
+       private String address2;
+       private String city;
+       private String country;
+       
+Txn Code : EMAIL_UPDATE
+
+/pref/email/otp
+No request
+
+Response:
+{"result":{"status":"success"},"txnRef":"0097f79b79cd472382430243533b138d"}
+
+
+
+
