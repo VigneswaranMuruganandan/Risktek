@@ -124,5 +124,10 @@ public class PerformActionOnTaskRequest {
       private String comments;
       private String assignee;
 
-Response
-public  class APIResponse implements Serializable {
+private Double value;
+       private String valueFmt;
+       private String currency;
+       private Double valueLcy;
+       private Integer valueDecimal;
+       private Integer valueWhole;
+
