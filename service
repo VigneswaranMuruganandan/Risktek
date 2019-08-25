@@ -1,0 +1,136 @@
+public class LeaveHistory extends Leave {
+      private StaticData absenceStatus;   // SUBMITTED, SAVED, ORA_WITHDRAWN
+      private StaticData leaveType;       // Military Service Leave,    Unpaid Hajj Leave,      Paternity Leave etc
+      
+      private StaticData relationshipType; // Optional:
+      private StaticData reason;                // Optional: Family Reason, Work Related Injury, Work Incident, Cold/Flu
+      private String comments;                  // Optional:
+
+      private boolean reqSalaryAdvance;   // Optional:
+
+      private String startDate;
+      private String endDate;
+      private int duration;
+
+      private String createDate;
+      private String personId;
+      private String personNumber;
+
+
+POST: leaves/apply
+Request
+public class Leave {
+      
+      private StaticData absenceStatus;   // SUBMITTED, SAVED, ORA_WITHDRAWN
+      private StaticData leaveType;       // Military Service Leave,    Unpaid Hajj Leave,      Paternity Leave etc
+      
+      private StaticData relationshipType; // Optional:
+      private StaticData reason;                // Optional: Family Reason, Work Related Injury, Work Incident, Cold/Flu
+      private String comments;                  // Optional:
+
+      private boolean reqSalaryAdvance;   // Optional:
+
+      private String startDate;
+      private String endDate;
+      private int duration;
+
+
+GET: banksupport/offers
+
+Response:
+public class OfferResponse extends APIResponse {
+
+      private List<OfferData> offers;
+
+      public class OfferData {
+            private String title;
+            private String titleAR;
+            private String description;
+            private String descriptionAR;
+            private String imageUrl;
+
+
+GET: banksupport/appsetting/{entity}
+public class StaticDataResponse extends APIResponse {
+
+      private static final long serialVersionUID = 2706153276619166987L;
+      private Map<String, List<StaticData>> staticMasterDataMap;
+
+public class StaticData {
+      private String entityCode;
+      private String shortCode;
+      private String description;
+
+      private Integer sortingOrder;
+      private String keywords;
+
+
+
+POST: member/login
+
+public class VerifyUserRequest {
+      private String userID;
+      private String password;
+
+public class VerifyUserResponse extends APIResponse {
+      private String name;
+      private String role;
+      
+      private String lastSucessLoginTime;
+      private String lastFailedLoginTime;
+      private int remainingLoginAttempts;
+
+public  class APIResponse implements Serializable {
+      private InvocationResult result;
+
+public class InvocationResult implements Serializable {
+      private String status;
+      private ErrorInfo errorInfo;
+      private Object[] msgArgs;
+
+public class ErrorInfo implements Serializable {
+      private String code;
+      private String desc;
+
+
+GET: /logout
+No request – only JWT or ConvID
+
+public  class APIResponse implements Serializable {
+      private InvocationResult result;
+
+
+GET: employees/{id}
+public class EmployeeDetailsResponse extends APIResponse {
+
+      private static final long serialVersionUID = -496850304728003154L;
+      private String empId;               // personId
+      private String personNumber;  // personNumber
+      private String name;
+      
+      private String dob;
+
+      private String address;
+      private String city;
+      private String country;
+      private String nationality;
+      
+      private String gender;
+      private String maritalStatus;
+
+      private String mobileNo;
+      private String email;
+      
+      private String empType;
+      private String hireDate;
+      private String joiningDate;
+      
+      private String nationalId;
+      private String nationalIdCountry;
+      private String passport;
+      private String passportIssueCountry;
+
+      private String group;
+      private String manager;
+      private String lastSalaryIncDate;
+      private String warningDate;
