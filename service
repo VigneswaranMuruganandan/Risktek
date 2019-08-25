@@ -1,136 +1,128 @@
-public class LeaveHistory extends Leave {
-      private StaticData absenceStatus;   // SUBMITTED, SAVED, ORA_WITHDRAWN
-      private StaticData leaveType;       // Military Service Leave,    Unpaid Hajj Leave,      Paternity Leave etc
+GET: /pendingtask/count
+Response -
+public class DashboardResponse extends APIResponse {
+      private int leaveBalance;
+
+      private int pendingLeaveTask;
+      private int pendingRequisitionTask;
+      private int pendingExpenseTask;
+
+
+GET: /pendingtask/
+Response -
+public class PendingTaskResponse extends APIResponse {
+      private List<LeaveApproval> leaveTasks;
+      private List<RequisitionApproval> requisitionTasks;
+      private List<ExpenseApproval> expenseTasks;
+
+
+public class LeaveApproval extends Task {
+
+      private StaticData leaveType;
+      private StaticData absenceReason;
       
-      private StaticData relationshipType; // Optional:
-      private StaticData reason;                // Optional: Family Reason, Work Related Injury, Work Incident, Cold/Flu
-      private String comments;                  // Optional:
+      private Duration duration;
 
-      private boolean reqSalaryAdvance;   // Optional:
+public class RequisitionApproval extends Task {
 
-      private String startDate;
-      private String endDate;
-      private int duration;
-
-      private String createDate;
-      private String personId;
-      private String personNumber;
-
-
-POST: leaves/apply
-Request
-public class Leave {
+      private String requisition;         // FAB-BNK-234234
+      private String description;         // Extension of SOW for iOS Architect 1-Jun-19 to 31-Dec-19
+      private Amount amount;  
+      private String supplier;
       
-      private StaticData absenceStatus;   // SUBMITTED, SAVED, ORA_WITHDRAWN
-      private StaticData leaveType;       // Military Service Leave,    Unpaid Hajj Leave,      Paternity Leave etc
+      private List<RequisitionLineItem>lineItems;
+
+      private List<TaskHistory> history;
+      private String lastApprovedBy;            // Last approver name from history
+      private List<String> rfiMembers;    // Get the members names from history
+
+public class RequisitionLineItem {
+      private Amount amount;
       
-      private StaticData relationshipType; // Optional:
-      private StaticData reason;                // Optional: Family Reason, Work Related Injury, Work Incident, Cold/Flu
-      private String comments;                  // Optional:
+      private String quantity;
+      private String unitPrice;
 
-      private boolean reqSalaryAdvance;   // Optional:
+      private String itemDescription;
+      private String supplier;
 
-      private String startDate;
-      private String endDate;
-      private int duration;
+public class TaskHistory {
 
-
-GET: banksupport/offers
-
-Response:
-public class OfferResponse extends APIResponse {
-
-      private List<OfferData> offers;
-
-      public class OfferData {
-            private String title;
-            private String titleAR;
-            private String description;
-            private String descriptionAR;
-            private String imageUrl;
+    private String approverId;
+    private String actionName;
+    private String displayName;
+    private String updateDate;
+    private String comment;
+    private String state;
 
 
-GET: banksupport/appsetting/{entity}
-public class StaticDataResponse extends APIResponse {
+public class ExpenseApproval extends Task {
 
-      private static final long serialVersionUID = 2706153276619166987L;
-      private Map<String, List<StaticData>> staticMasterDataMap;
+      private String expenseReportNumber;
+      private Amount amount;
 
-public class StaticData {
-      private String entityCode;
-      private String shortCode;
+      private String purpose;
+      
+
+public class Task {
+      private String title;               // - Approve Requisition BNK-116747
+
+      private String taskId;                    // ed496639-40c2-4529-925f-eeb185a7cb0e            
+      private String taskNumber;                // 1010434
+      private String identificationKey;   // 300000083858650
+
+      private String requeterId;          // fromUserName - guptar
+      private String requeterName;  // fromUserDisplayName - Awad Al Jamal
+
+      private String assignedDate;
+      private String createdDate;
+      private String createdBy;
+    
+      private int priority;
+
+
+
+GET: /pendingtask/{identificationKey}/expense/{taskNumber}
+Response -
+public class ExpenseRecordDetailResponse extends APIResponse {
+
+      private List<ExpenseLineItem>lineItems;
+      private List<TaskHistory> history;
+      private List<Document> documents;
+
+public class ExpenseLineItem {
+      
+      private String type;    // HR Staff Enga
+      private String clazz;   //expenseCategoryCode - Business
+      private String source;  // Cash
       private String description;
+      
+      private Amount amount;
 
-      private Integer sortingOrder;
-      private String keywords;
+public class Document {
 
-
-
-POST: member/login
-
-public class VerifyUserRequest {
-      private String userID;
-      private String password;
-
-public class VerifyUserResponse extends APIResponse {
       private String name;
-      private String role;
-      
-      private String lastSucessLoginTime;
-      private String lastFailedLoginTime;
-      private int remainingLoginAttempts;
+      private String link;
+      private DocumentType type;
+      private String size;
 
+
+GET: /pendingtask/{taskNumber}/document
+Response -
+public class TaskDocumentsResponse extends APIResponse {
+      private List<Document> documents;
+
+
+POST: /pendingtask/submit
+Request
+public class PerformActionOnTaskRequest {
+
+    private String taskNumber;                  // 1010434
+    private String identificationKey;     // 300000083858650
+
+    private StaticData approvalStatus;
+    
+      private String comments;
+      private String assignee;
+
+Response
 public  class APIResponse implements Serializable {
-      private InvocationResult result;
-
-public class InvocationResult implements Serializable {
-      private String status;
-      private ErrorInfo errorInfo;
-      private Object[] msgArgs;
-
-public class ErrorInfo implements Serializable {
-      private String code;
-      private String desc;
-
-
-GET: /logout
-No request – only JWT or ConvID
-
-public  class APIResponse implements Serializable {
-      private InvocationResult result;
-
-
-GET: employees/{id}
-public class EmployeeDetailsResponse extends APIResponse {
-
-      private static final long serialVersionUID = -496850304728003154L;
-      private String empId;               // personId
-      private String personNumber;  // personNumber
-      private String name;
-      
-      private String dob;
-
-      private String address;
-      private String city;
-      private String country;
-      private String nationality;
-      
-      private String gender;
-      private String maritalStatus;
-
-      private String mobileNo;
-      private String email;
-      
-      private String empType;
-      private String hireDate;
-      private String joiningDate;
-      
-      private String nationalId;
-      private String nationalIdCountry;
-      private String passport;
-      private String passportIssueCountry;
-
-      private String group;
-      private String manager;
-      private String lastSalaryIncDate;
-      private String warningDate;
