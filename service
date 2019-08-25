@@ -1,133 +1,24 @@
-GET: /pendingtask/count
-Response -
-public class DashboardResponse extends APIResponse {
-      private int leaveBalance;
+public enum DocumentType {
 
-      private int pendingLeaveTask;
-      private int pendingRequisitionTask;
-      private int pendingExpenseTask;
-
-
-GET: /pendingtask/
-Response -
-public class PendingTaskResponse extends APIResponse {
-      private List<LeaveApproval> leaveTasks;
-      private List<RequisitionApproval> requisitionTasks;
-      private List<ExpenseApproval> expenseTasks;
-
-
-public class LeaveApproval extends Task {
-
-      private StaticData leaveType;
-      private StaticData absenceReason;
-      
-      private Duration duration;
-
-public class RequisitionApproval extends Task {
-
-      private String requisition;         // FAB-BNK-234234
-      private String description;         // Extension of SOW for iOS Architect 1-Jun-19 to 31-Dec-19
-      private Amount amount;  
-      private String supplier;
-      
-      private List<RequisitionLineItem>lineItems;
-
-      private List<TaskHistory> history;
-      private String lastApprovedBy;            // Last approver name from history
-      private List<String> rfiMembers;    // Get the members names from history
-
-public class RequisitionLineItem {
-      private Amount amount;
-      
-      private String quantity;
-      private String unitPrice;
-
-      private String itemDescription;
-      private String supplier;
-
-public class TaskHistory {
-
-    private String approverId;
-    private String actionName;
-    private String displayName;
-    private String updateDate;
-    private String comment;
-    private String state;
-
-
-public class ExpenseApproval extends Task {
-
-      private String expenseReportNumber;
-      private Amount amount;
-
-      private String purpose;
-      
-
-public class Task {
-      private String title;               // - Approve Requisition BNK-116747
-
-      private String taskId;                    // ed496639-40c2-4529-925f-eeb185a7cb0e            
-      private String taskNumber;                // 1010434
-      private String identificationKey;   // 300000083858650
-
-      private String requeterId;          // fromUserName - guptar
-      private String requeterName;  // fromUserDisplayName - Awad Al Jamal
-
-      private String assignedDate;
-      private String createdDate;
-      private String createdBy;
-    
-      private int priority;
-
-
-
-GET: /pendingtask/{identificationKey}/expense/{taskNumber}
-Response -
-public class ExpenseRecordDetailResponse extends APIResponse {
-
-      private List<ExpenseLineItem>lineItems;
-      private List<TaskHistory> history;
-      private List<Document> documents;
-
-public class ExpenseLineItem {
-      
-      private String type;    // HR Staff Enga
-      private String clazz;   //expenseCategoryCode - Business
-      private String source;  // Cash
-      private String description;
-      
-      private Amount amount;
-
-public class Document {
-
-      private String name;
-      private String link;
-      private DocumentType type;
-      private String size;
-
-
-GET: /pendingtask/{taskNumber}/document
-Response -
-public class TaskDocumentsResponse extends APIResponse {
-      private List<Document> documents;
-
-
-POST: /pendingtask/submit
-Request
-public class PerformActionOnTaskRequest {
-
-    private String taskNumber;                  // 1010434
-    private String identificationKey;     // 300000083858650
-
-    private StaticData approvalStatus;
-    
-      private String comments;
-      private String assignee;
-
-private Double value;
-       private String valueFmt;
-       private String currency;
-       private Double valueLcy;
-       private Integer valueDecimal;
-       private Integer valueWhole;
-
+	PDF("PDF", "application/pdf"),
+	
+	BMP("BMP", "image/bmp"), 
+	PNG("PNG", "image/png"), 
+	GIF("GIF", "image/gif"), 
+	JPG("JPG", "image/jpg"), 
+	JPEG("JPEG", "image/jpeg"),
+	
+	EXCEL("XLS", "application/vnd.ms-excel"), 
+	XLS("XLS", "application/vnd.ms-excel"), 
+	XLSX("XLSX", "application/octet-stream"),
+	
+	PPT("PPT", "application/octet-stream"), 
+	PPTX("PPTX", "application/octet-stream"),
+	
+	DOC("DOC", "application/msword"), 
+	DOCX("DOCX", "application/octet-stream"),
+	
+	RTF("RTF", "application/octet-stream"), 
+	TXT("TEXT", "text/plain"),
+	CSV("CSV", "application/csv"),
+	BASE64("na","na");
