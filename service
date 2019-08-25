@@ -1,24 +1,37 @@
-public enum DocumentType {
-
-	PDF("PDF", "application/pdf"),
-	
-	BMP("BMP", "image/bmp"), 
-	PNG("PNG", "image/png"), 
-	GIF("GIF", "image/gif"), 
-	JPG("JPG", "image/jpg"), 
-	JPEG("JPEG", "image/jpeg"),
-	
-	EXCEL("XLS", "application/vnd.ms-excel"), 
-	XLS("XLS", "application/vnd.ms-excel"), 
-	XLSX("XLSX", "application/octet-stream"),
-	
-	PPT("PPT", "application/octet-stream"), 
-	PPTX("PPTX", "application/octet-stream"),
-	
-	DOC("DOC", "application/msword"), 
-	DOCX("DOCX", "application/octet-stream"),
-	
-	RTF("RTF", "application/octet-stream"), 
-	TXT("TEXT", "text/plain"),
-	CSV("CSV", "application/csv"),
-	BASE64("na","na");
+{
+     "result": {
+           "status": "SUCCESS"
+     },
+     "absenceHistories": [
+           {
+                "absenceStatus": {
+                     "shortCode": "SUBMITTED",
+                     "description": "Submitted"
+                },
+                "leaveType": {
+                     "shortCode": "MILITARY_SERVICE_LEAVE",
+                     "description": "Military Service Leave"
+                },
+                "relationshipType": {
+                     "shortCode": "WIFE",
+                     "description": "Wife"
+                },
+                "reason": {
+                     "shortCode": "WORK_RELATED_INJURY",
+                     "description": "Work Related Injury"
+                },
+                "comments": "Vinod",
+                "reqSalaryAdvance": true,
+                "startDate": "04-05-2019",
+                "endDate": "14-05-2019",
+                "duration": 4,
+                "approvalStatus": {
+                     "shortCode": "APPROVED",
+                     "description": "Approved"
+                },
+                "createdDate": "04-05-2019",
+                "personId": "guptar",
+                "personNumber": "guptar"
+           }
+     ]
+}
