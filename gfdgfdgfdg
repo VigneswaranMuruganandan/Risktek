@@ -1,5 +1,184 @@
-return 'Bxxxxxxxxyxxxx4xxxyxxxxxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-            var r = Math.random() * 16 | 0,
-                v = c === 'x' ? r : (r & 0x3 | 0x8);
-            return v.toString(16);
-        });
+October 2019
+------------
+Emirates Islamic = 3886.64
+HSBC Bank =
+FGB Bank = 5,907.00
+RAK Bank = 8579.66
+Cognizant 5th Cheque = 6,000.00
+Noor Bank - 58.65 AED
+
+
+September(2019)
+---------------
+Noor Bank = 3675.00 AED (PAID)
+Emirates Islamic(4th Sep) = 403.32 AED (PAID)
+HSBC Bank = 769.56 AED (PAID)
+RAK Bank = 13,462.05 - (3,000.00+15.75) - 1,666.67 = 8,779.63 AED (PAID)
+FGB Bank = 5,907 AED (PAID)
+Cognizant 4th Check = 6,000.00 (PAID)
+
+Need to give for Sridhar - 42,202.00 INR  (PAID)
+Need to give for Santhosh- 5000.00 INR (PAID)
+August(2019)
+-----------
+Noor Bank(29TH JULY) - 3,111.00 AED (PAID)
+FGB Bank(9TH AUG) = 5,907.00 AED (PAID)
+RAK Bank(4TH AUG) = 4,520.00 AED (PAID)
+Emirates Islamic - 523.17 AED (PAID)
+HSBC Bank = 5,321.52 AED (PAID)
+HDFC = 23.00 INR (PAID)
+Cognizant 3rd Check = 6,000.00 (Paid)
+CITI- 
+
+Need to give for Sridhar - 7202.00 INR
+
+July (2019)
+-----------
+Rak Bank = 4,753.43 AED (PAID) ---> 1,000.00 Buffer
+FGB Bank = 5,907.00 AED (PAID) 
+HSBC Bank = 1992.21 AED (PAID) 
+2nd Cheque = 6000.00 AED (PAID) 
+HDFC = 33,681.00 INR (PAID) 
+Cognizant 3rd Check = 6,000.00 (Paid)
+
+Need to give for Sridhar - 7202.00 INR
+
+June (2019)
+------------
+Rak Bank(04 Jun 2019) = 7592.00 AED (PAID) 
+FGB Bank(09 Jun 2019) = 5907.00 AED (PAID) 
+HSBC Bank(08 Jun 2019) = 459.00 AED 
+ENBD Bank(09 Jun 2019) = 23.23 AED (PAID) 
+MASHREQ Bank(19 Jun 2019) = 89.62 AED (PAID) 
+1st Cheque = 6000.00 AED (PAID) 
+HDFC = 7298.00
+
+Sridhar - 7000 INR-7298.00=7000
+
+May (20019)
+-----------
+Rak Bank = (7,646.46 - 1,929.17) =  5,717.29 AED (PAID) 
+FGB Bank = 5,907.00 AED (PAID) 
+CITI Bank = 4,266.66 AED (PAID) 
+ENBD Bank = 706.28 AED (PAID) 
+
+Sridhar - 600 AED (PAID)
+7000 INR
+Vijay - 2500 AED (PAID)
+
+Apr (2019)
+----------
+Mashreq Bank[19/04/2019] = 2768.27+9.93+105+333.33 = 3,216.53
+Rak Bank = 2,539.21 AED (PAID) 
+FGB Bank = 6,136.45 AED (PAID)  
+Emirates NBD = 5,822.94 AED (PAID) 
+CITI Bank = 4391.12 AED (PAID) 
+5th Rent cheque = 6,000.00 AED (PAID) 
+HDFC Bank = 0.00 INR
+
+Sridhar - 600 AED + 5000 INR + 2 thyronorm-25 mg (330 INR)
+Sridhar - 400 AED [PAID]
+2 thyronorm-25 mg (330 INR) [PAID]
+
+Mar (2019)
+----------
+Rak Bank = 5,612.94 AED (PAID)
+FGB Bank = 5,906.04 AED (PAID)
+Emirates NBD = 1880 AED (PAID)
+CITI Bank = 4,046.15 AED (PAID)
+4th Rent cheque = 6,000.00 AED (PAID) 
+HDFC Bank = 0.00 INR
+
+Sridhar needs to pay 1300 AED + 200 AED => 500 PAID => Remaining 1000 AED
+
+FEB (2019)
+-----------
+Rak Bank = 6039.82 AED (PAID)
+FGB Bank = 6012.05 (PAID)
+Emirates NBD = 1880 AED (PAID)
+CITI Bank = 4,629.74 AED (PAID) 371 AED extra i paid
+3rd Rent cheque = 6,000.00 AED (PAID)
+HDFC Bank = 23 INR (PAID)
+
+
+
+
+Sridhar - 25,000 + 12,000 + 30,000 = 67,000 INR (Paid)
+	- 5000 = 5000 AED (Received)
+	- 500 + 150 (received)
+Giri - 100 AED (GOT)
+
+JAN 2019
+---------
+FGB Bank (09 JAN 2019) = 2307.04 AED (Paid)
+CITI Bank = 4,380.82 AED (Paid)
+Emirates NBD = 1876.94 AED (Paid) Extra 1 have to pay
+RAK Bank(04 JAN 2019) = 4,241.94 AED (Paid)
+2nd Rent Cheque = 6,000.00 AED (Paid)
+HDFC Bank = 13,775 INR (Paid)
+
+DEC 2018
+--------
+FGB Bank - 8274.27 AED(Paid)
+CITI Bank - 4381.41 AED(Paid)
+Mashreq Bank - 2810.85 AED
+Emirates NBD = 1700.00 AED(Paid)
+RAK Bank - 2363.85 AED(Paid)
+------------------------
+19530.38
+------------------------
+
+From *****- 80,000 INR
+
+Nov 2018
+--------
+FGB Bank (06 Nov 2018)- 8270.96(Paid)
+CITI Bank (06 Nov 2018)- 4381.41(Paid)
+RAK Bank (04 Nov 2018) - 2932.45(Paid)
+Emirates NBD = 1620 + 972 + 48.6 = 2,640.60(Paid)
+Mashreq Bank - 2810.85 (Paid)
+	
+From Sridhar - 400 AED (Paid)
+From Vijay i got 1400 AED (Paid)
+
+
+OCT 2018
+--------
+Rak Bank (05 OCT 2018)- 7576.61(Paid)
+FGB Bank (06 OCT 2018)- 8270.96(Paid)
+CITI Bank (06 OCT 2018)- 4381.41(Paid)
+Mashreq Bank (20 Oct 2018) - 3129.85 (Paid)
+Emirates NBD(10 Oct 2018)-  266.45 (Paid)
+Emirates NBD - 3540.00 (PAID) - Nov Month Payout
+
+Sridhar - 800 AED
+= 2040 + 500 = 1740 AED
+
+Remaining required = 3129.85 - 1740 = 1389.85 AED
+
+
+From Vijay i got 1400 AED (Sep - 100 AED / Oct - 1300 AED)
+From Sridhar - 400 AED
+
+
+
+57
+
+ronak-0554934780
+
+
+
+Emirates ND Transcations:
+01 Nov 2018 - AED 2,640.60 
+29 Nov 2018 - AED 1,700.00 
+31 Dec 2018 - AED 1,876.00
+09 Jan 2019 - AED 18.00 
+04 Feb 2019 - AED 1,880.00 
+07 Mar 2019 - AED 2,000.00
+06 Mar 2019 - AED 1,880.00
+
+
+
+
+Total Amount - 32,400.00 
+Processing Fee - 972.00+48.60 = 1020.60
